@@ -1,0 +1,21 @@
+{
+  "name" : "Douban FM 歌词",
+  "version" : "0.0.1",
+  "manifest_version" : 2,
+  "description" : "豆瓣电台歌词",
+  "page_action" : {
+    "default_icon" : "icon-48.png",
+    "default_title" : "豆瓣电台歌词"
+  },
+  "permissions" : ["tabs", "http://douban.fm/", "http://*.geci.me/*"],
+  "background" : {"scripts" : ["background.js"]},
+  "content_scripts" : [{
+    "matches" : ["http://douban.fm/"],
+    "js" : ["main.js"],
+    "runat" : "document_end"
+  }],
+  "icons" : {
+    "48" : "icon-48.png",
+    "128" : "icon-128.png"
+  }
+}
